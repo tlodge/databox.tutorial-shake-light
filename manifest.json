@@ -1,0 +1,1 @@
+{"app":{"name":"","description":"","tags":"","id":"bbdfd033.73f89"},"packages":[{"type":"tab","id":"4096ed51.aa4004","name":"new package","risks":"","benefits":"","purpose":"","install":"optional","datastores":[{"id":"de70d778.3506a8","name":"sensingkit","type":"accelerometer"},{"id":"d72edcba.60afc","name":"bulbsout","type":"set-bulb-on"}]}],"allowed-combinations":[]}
