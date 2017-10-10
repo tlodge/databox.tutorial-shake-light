@@ -1,1 +1,52 @@
-{"app":{"name":"tutorial-shake-light2","description":"shake a phone to turn on a light","tags":"shake, light","id":"b5b7b40b.ac1928"},"packages":[{"type":"tab","id":"4096ed51.aa4004","name":"new package","risks":"","benefits":"shows how to write an app","purpose":"to show how to write a simple app","install":"optional","datastores":[{"id":"de70d778.3506a8","name":"sensingkit","type":"accelerometer"},{"id":"d72edcba.60afc","name":"bulbsout","type":"set-bulb-on"}]}],"allowed-combinations":[]}
+{
+    "manifest-version": 1,
+    "name": "tlodge-tutorial-shake-light2",
+    "version": "0.1.0",
+    "description": "shake a phone to turn on a light",
+    "author": "tlodge",
+    "licence": "MIT",
+    "databox-type": "app",
+    "tags": [
+        "shake",
+        " light"
+    ],
+    "homepage": "https://github.com/tlodge/tlodge-tutorial-shake-light2",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tlodge/tlodge-tutorial-shake-light2.git"
+    },
+    "packages": [
+        {
+            "id": "4096ed51.aa4004",
+            "name": "new package",
+            "purpose": "to show how to write a simple app",
+            "required": false,
+            "datastores": [
+                "de70d778.3506a8",
+                "d72edcba.60afc"
+            ],
+            "benefits": "shows how to write an app"
+        }
+    ],
+    "allowed-combinations": [],
+    "datasources": [
+        {
+            "type": "accelerometer",
+            "required": true,
+            "name": "sensingkit",
+            "clientid": "de70d778.3506a8",
+            "granularities": []
+        },
+        {
+            "type": "set-bulb-on",
+            "required": true,
+            "name": "bulbsout",
+            "clientid": "d72edcba.60afc",
+            "granularities": []
+        }
+    ],
+    "network-permissions": [],
+    "resource-requirements": {},
+    "volumes": [],
+    "export-whitelist": []
+}
