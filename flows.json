@@ -1,1 +1,137 @@
-[{"id":"4096ed51.aa4004","label":"new package","type":"tab"},{"id":"de70d778.3506a8","type":"sensingkit","z":"4096ed51.aa4004","name":"","subtype":"accelerometer","x":195,"y":347,"wires":[["631ed067.1b26c","53e60cbc.f434a4","ae1c44de.4e9608"]]},{"id":"631ed067.1b26c","type":"dbfunction","z":"4096ed51.aa4004","name":"","func":"const state = context.get(\"state\") || \"on\";\ncontext.set(\"state\", state===\"on\" ? \"off\" : \"on\");\n\nif (msg.payload.x > 20){\n    return {\n        type: \"set-bulb-on\",\n        payload: state,\n    }\n}","outputs":1,"inputtypedef":"","outputtypedef":"","noerr":0,"x":344,"y":412,"wires":[["d72edcba.60afc"]]},{"id":"24b6464e.c9af0a","type":"app","z":"4096ed51.aa4004","name":"","appId":"webapp","layout":[["480c7358.6e613c"],["53e60cbc.f434a4"]],"x":581,"y":261,"wires":[]},{"id":"53e60cbc.f434a4","type":"chartify","z":"4096ed51.aa4004","name":"","title":"","chart":"gauge","xlabel":"","ylabel":"","min":"","max":"","labels":"","maxreadings":"","ticks":"","xtype":[{"source":"sensingkit","name":"x","type":"number"}],"ytype":[],"subtype":"bar","x":340,"y":315,"wires":[["24b6464e.c9af0a"]]},{"id":"d72edcba.60afc","type":"bulbsout","z":"4096ed51.aa4004","name":"","subtype":"set-bulb-on","value":"","x":532,"y":410,"wires":[]},{"id":"ae1c44de.4e9608","type":"dbfunction","z":"4096ed51.aa4004","name":"","func":"var max = Math.max(context.get(\"max\")||0, msg.payload.x);\ncontext.set(\"max\", max);\n\nreturn {\n    payload : max\n}","outputs":1,"inputtypedef":"","outputtypedef":"","noerr":0,"x":338,"y":204,"wires":[["480c7358.6e613c"]]},{"id":"480c7358.6e613c","type":"webify","z":"4096ed51.aa4004","name":"","field":"payload","fieldType":"msg","format":"handlebars","syntax":"mustache","template":"This is the payload: {{payload}} !","x":456,"y":204,"wires":[["24b6464e.c9af0a"]]}]
+[
+    {
+        "id": "4096ed51.aa4004",
+        "label": "new package",
+        "type": "tab"
+    },
+    {
+        "id": "de70d778.3506a8",
+        "type": "sensingkit",
+        "z": "4096ed51.aa4004",
+        "name": "",
+        "subtype": "accelerometer",
+        "x": 195,
+        "y": 347,
+        "wires": [
+            [
+                "631ed067.1b26c",
+                "53e60cbc.f434a4",
+                "ae1c44de.4e9608"
+            ]
+        ]
+    },
+    {
+        "id": "631ed067.1b26c",
+        "type": "dbfunction",
+        "z": "4096ed51.aa4004",
+        "name": "",
+        "func": "const state = context.get(\"state\") || \"on\";\ncontext.set(\"state\", state===\"on\" ? \"off\" : \"on\");\n\nif (msg.payload.x > 20){\n    return {\n        type: \"set-bulb-on\",\n        payload: state,\n    }\n}",
+        "outputs": 1,
+        "inputtypedef": "",
+        "outputtypedef": "",
+        "noerr": 0,
+        "x": 344,
+        "y": 412,
+        "wires": [
+            [
+                "d72edcba.60afc"
+            ]
+        ]
+    },
+    {
+        "id": "24b6464e.c9af0a",
+        "type": "app",
+        "z": "4096ed51.aa4004",
+        "name": "",
+        "appId": "webapp",
+        "layout": [
+            [
+                "480c7358.6e613c"
+            ],
+            [
+                "53e60cbc.f434a4"
+            ]
+        ],
+        "x": 581,
+        "y": 261,
+        "wires": []
+    },
+    {
+        "id": "53e60cbc.f434a4",
+        "type": "chartify",
+        "z": "4096ed51.aa4004",
+        "name": "",
+        "title": "",
+        "chart": "gauge",
+        "xlabel": "",
+        "ylabel": "",
+        "min": "",
+        "max": "",
+        "labels": "",
+        "maxreadings": "",
+        "ticks": "",
+        "xtype": [
+            {
+                "source": "sensingkit",
+                "name": "x",
+                "type": "number"
+            }
+        ],
+        "ytype": [],
+        "subtype": "bar",
+        "x": 340,
+        "y": 315,
+        "wires": [
+            [
+                "24b6464e.c9af0a"
+            ]
+        ]
+    },
+    {
+        "id": "d72edcba.60afc",
+        "type": "bulbsout",
+        "z": "4096ed51.aa4004",
+        "name": "",
+        "subtype": "set-bulb-on",
+        "value": "",
+        "x": 532,
+        "y": 410,
+        "wires": []
+    },
+    {
+        "id": "ae1c44de.4e9608",
+        "type": "dbfunction",
+        "z": "4096ed51.aa4004",
+        "name": "",
+        "func": "var max = Math.max(context.get(\"max\")||0, msg.payload.x);\ncontext.set(\"max\", max);\n\nreturn {\n    payload : max\n}",
+        "outputs": 1,
+        "inputtypedef": "",
+        "outputtypedef": "",
+        "noerr": 0,
+        "x": 338,
+        "y": 204,
+        "wires": [
+            [
+                "480c7358.6e613c"
+            ]
+        ]
+    },
+    {
+        "id": "480c7358.6e613c",
+        "type": "webify",
+        "z": "4096ed51.aa4004",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "x": 456,
+        "y": 204,
+        "wires": [
+            [
+                "24b6464e.c9af0a"
+            ]
+        ]
+    }
+]
