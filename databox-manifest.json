@@ -10,10 +10,10 @@
         "shake",
         " light"
     ],
-    "homepage": "https://github.com/tlodge/tlodge-tutorial-shake-light2",
+    "homepage": "https://github.com/tlodge/databox.tutorial-shake-light",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/tlodge/tlodge-tutorial-shake-light2.git"
+        "url": "git+https://github.com/tlodge/databox.tutorial-shake-light.git"
     },
     "packages": [
         {
