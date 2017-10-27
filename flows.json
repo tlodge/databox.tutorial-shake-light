@@ -10,8 +10,8 @@
         "z": "4096ed51.aa4004",
         "name": "",
         "subtype": "accelerometer",
-        "x": 195,
-        "y": 347,
+        "x": 77,
+        "y": 188,
         "wires": [
             [
                 "631ed067.1b26c",
@@ -30,8 +30,8 @@
         "inputtypedef": "",
         "outputtypedef": "",
         "noerr": 0,
-        "x": 344,
-        "y": 412,
+        "x": 250,
+        "y": 318,
         "wires": [
             [
                 "d72edcba.60afc"
@@ -52,8 +52,8 @@
                 "53e60cbc.f434a4"
             ]
         ],
-        "x": 581,
-        "y": 261,
+        "x": 447,
+        "y": 143,
         "wires": []
     },
     {
@@ -79,8 +79,9 @@
         ],
         "ytype": [],
         "subtype": "bar",
-        "x": 340,
-        "y": 315,
+        "previousinputs": [],
+        "x": 251,
+        "y": 224,
         "wires": [
             [
                 "24b6464e.c9af0a"
@@ -94,8 +95,8 @@
         "name": "",
         "subtype": "set-bulb-on",
         "value": "",
-        "x": 532,
-        "y": 410,
+        "x": 392,
+        "y": 313,
         "wires": []
     },
     {
@@ -108,8 +109,8 @@
         "inputtypedef": "",
         "outputtypedef": "",
         "noerr": 0,
-        "x": 338,
-        "y": 204,
+        "x": 210,
+        "y": 97,
         "wires": [
             [
                 "480c7358.6e613c"
@@ -126,8 +127,8 @@
         "format": "handlebars",
         "syntax": "mustache",
         "template": "This is the payload: {{payload}} !",
-        "x": 456,
-        "y": 204,
+        "x": 326,
+        "y": 97,
         "wires": [
             [
                 "24b6464e.c9af0a"
