@@ -126,7 +126,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "This is the payload: {{payload}} !",
+        "template": "<div style=\"text-align:center; font-size:200px\">{{payload}}</div>",
         "x": 326,
         "y": 97,
         "wires": [
